@@ -20,6 +20,8 @@ class FilesSpider(scrapy.Spider):
 
         if not os.path.exists('data'):
             os.mkdir('data')
+        if not os.path.exists('out'):
+            os.mkdir('out')
 
     def start_requests(self):
         urls = ['http://dadosabertos.c3sl.ufpr.br/curitibaurbs/']
